@@ -3,6 +3,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
 
 @DisplayName("Тесты на reqres.in")
@@ -137,6 +138,7 @@ public class ReqresTests {
                 .then()
                 .log().status()
                 .log().body()
-                .statusCode(404);
+                .statusCode(404)
+                .body(is("{}"));
     }
 }
