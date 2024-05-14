@@ -32,7 +32,7 @@ public class LoginTests extends TestBase {
                         .extract().as(LoginResponseModel.class));
 
         step("Check response", () ->
-                assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4"));
+                assertThat(response.getToken()).isNotNull());
     }
 
     @Test

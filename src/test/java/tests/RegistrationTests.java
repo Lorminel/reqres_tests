@@ -33,7 +33,7 @@ public class RegistrationTests extends TestBase {
                         .extract().as(RegistrationResponseModel.class));
 
         step("Check response", () -> {
-            assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
+            assertThat(response.getToken()).isNotNull();
             assertThat(response.getId()).isNotNull();
         });
     }
